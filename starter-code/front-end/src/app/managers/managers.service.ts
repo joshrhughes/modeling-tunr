@@ -24,6 +24,11 @@ export class ManagersService {
 		return this.http.put(`${this.baseUrl}/api/managers/${updatedManager.id}`, updatedManager);
 	}
 
+	deleteManager(manager) {
+		console.log(manager.id);
+		return this.http.delete(`${this.baseUrl}/api/managers/${manager.id}`);
+	}
+
   constructor(private http: Http) { }
 
 }

@@ -3,7 +3,7 @@ var router = express.Router();
 var artistsController = require('../controllers/artists.js');
 var managersController = require('../controllers/managers.js');
 
-//Artist Routes
+	//Artist Routes
   
 // index
 router.get('/api/artists', artistsController.index);
@@ -20,11 +20,24 @@ router.put('/api/artists/:id', artistsController.update);
 // destroy
 router.delete('/api/artists/:id', artistsController.destroy);
 
-//Manager Routes
+
+	//Manager Routes
 
 // index
 router.get('/api/managers', managersController.index);
 
-//Song Routes
+// create
+router.post('/api/managers', managersController.create);
+
+// show
+router.get ('/api/managers/:id', managersController.show);
+
+// update
+router.put('/api/managersController/:id', managersController.update);
+
+// destroy
+router.delete('/api/managers/:id', managersController.destroy);
+
+	//Song Routes
 
 module.exports = router;
