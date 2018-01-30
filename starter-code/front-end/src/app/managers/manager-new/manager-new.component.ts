@@ -26,7 +26,7 @@ export class ManagerNewComponent implements OnInit {
   		.subscribe(function(res) {
   			console.log(res.json());
   			let manager = res.json();
-  			this.router.navigate(['/managers/' + manager.id])
+  			this.router.navigate(['/managers/' + manager.id]);
   		})
   }
 
