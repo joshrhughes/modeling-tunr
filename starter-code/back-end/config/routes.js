@@ -30,7 +30,7 @@ router.get('/api/managers', managersController.index);
 router.post('/api/managers', managersController.create);
 
 // show
-router.get ('/api/managers/:id', managersController.show);
+router.get('/api/managers/:id', managersController.show);
 
 // update
 router.put('/api/managersController/:id', managersController.update);

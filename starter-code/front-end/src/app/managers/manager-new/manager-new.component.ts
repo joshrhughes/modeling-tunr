@@ -23,7 +23,7 @@ export class ManagerNewComponent implements OnInit {
   	console.log('Saving manager:');
   	console.log(newManager);
   	this.managersService.saveManager(newManager)
-  		.subscribe(function(res) {
+  		.subscribe((res)=> {
   			console.log(res.json());
   			let manager = res.json();
   			this.router.navigate(['/managers/' + manager.id]);
